@@ -1,0 +1,34 @@
+{
+  "name": "has-many-app",
+  "version": "1.0.0",
+  "description": "database for matching profiles",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.9.2",
+    "express": "^4.10.1",
+    "mongoose": "^3.8.19"
+  },
+  "devDependencies": {
+    "chai": "^1.9.2",
+    "chai-http": "^1.0.0",
+    "grunt": "^0.4.5",
+    "grunt-cli": "^0.1.13",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-jscs": "^0.8.1",
+    "grunt-simple-mocha": "^0.4.0"
+  },
+  "scripts": {
+    "test": "node_modules/grunt-cli/bin/grunt test",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/crenwick/has-many-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/crenwick/has-many-app/issues"
+  },
+  "homepage": "https://github.com/crenwick/has-many-app"
+}
