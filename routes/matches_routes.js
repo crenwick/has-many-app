@@ -2,6 +2,7 @@
 'use strict';
 
 var Match = require('../models/match');
+//var Profile = require('../models/profile');
 
 module.exports = function(app) {
 
@@ -13,6 +14,7 @@ module.exports = function(app) {
             res.json(data);
         });
         //needs to update both profile.match[] with this match _id !!
+        //Or i could just search all the matches for ones that hold the profile ID i am looking for...
     });
 
     //GET a match
