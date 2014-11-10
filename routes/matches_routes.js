@@ -2,7 +2,7 @@
 'use strict';
 
 var Match = require('../models/match');
-var Profile = require('../models/profile');
+//var Profile = require('../models/profile');
 
 module.exports = function(app) {
 
@@ -12,19 +12,20 @@ module.exports = function(app) {
         match.save(function(err, data) {
             if (err) return res.status(500).send('there was an error');
 
-            Profile.findOneAndUpdate(
-                {_id: req.body.profileA}, {$push: {matches: data._id}},
-                {safe: true, upsert: true},
-                function(err) {
-                    if (err) console.log(err);
-                });
-
-            Profile.findOneAndUpdate(
-                {_id: req.body.profileB}, {$push: {matches: data._id}},
-                {safe: true, upsert: true},
-                function(err) {
-                    if (err) console.log(err);
-                });
+            // These are made to send the matchID to the two profiles. This would just cause errors and duplicate data.
+//            Profile.findOneAndUpdate(
+//                {_id: req.body.profileA}, {$push: {matches: data._id}},
+//                {safe: true, upsert: true},
+//                function(err) {
+//                    if (err) console.log(err);
+//                });
+//
+//            Profile.findOneAndUpdate(
+//                {_id: req.body.profileB}, {$push: {matches: data._id}},
+//                {safe: true, upsert: true},
+//                function(err) {
+//                    if (err) console.log(err);
+//                });
             res.json(data);
         });
     });

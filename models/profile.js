@@ -13,7 +13,7 @@ var profileSchema = mongoose.Schema({
         ageMax: { type: Number, min: 19, max: 99 },
         sex: { type: String }
     },
-    matches: [],
+    //matches: [],
     dateJoined: { type: Date, default: Date.now }
 });
 

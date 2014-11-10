@@ -117,26 +117,6 @@ describe('basic profile crud', function() {
         });
     });
 
-    it('should be able to check if the new match ID is in the matches array of Profile A', function(done) {
-        chai.request('http://localhost:3000')
-        .get('/api/profile/' + idTestProfile)
-        .end(function(err, res) {
-            expect(err).to.eql(null);
-            expect(res.body.matches[0]).to.eql(matchID);
-            done();
-        });
-    });
-
-    it('should be able to check if the new match ID is in the matches array of Profile B', function(done) {
-        chai.request('http://localhost:3000')
-        .get('/api/profile/' + idTestProfile2)
-        .end(function(err, res) {
-            expect(err).to.eql(null);
-            expect(res.body.matches[0]).to.eql(matchID);
-            done();
-        });
-    });
-
     it('should destroy the match', function(done) {
         chai.request('http://localhost:3000')
         .delete('/api/match/' + matchID)
