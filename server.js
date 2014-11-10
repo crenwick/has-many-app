@@ -10,7 +10,8 @@ app.use(bodyparser.json());
 
 mongoose.connect(process.env.MONGO_URL || process.env.MONGOLAD_URI || 'mongodb://localhost/has_many_development');
 
-//require('./routes/
+require('./routes/profiles_routes')(app);
+require('./routes/matches_routes')(app);
 
 app.set('port', process.env.PORT || 3000);
 app.listen(app.get('port'), function() {
