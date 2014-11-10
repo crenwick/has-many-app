@@ -47,7 +47,4 @@ module.exports = function(app) {
             res.json({msg: 'success!'});
         });
     });
-
-    //POST a match
-    //GET a match
 };
